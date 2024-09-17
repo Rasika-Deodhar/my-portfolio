@@ -1,6 +1,9 @@
 # my-portfolio
 A portfolio website to describe myself and skills I possess and am eager to learn.
 
+# Template Creation
+Created a template using [Canva](https://www.canva.com/) - Rasika Deodhar(https://rasikadeodhar.my.canva.site/)
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
