@@ -7,12 +7,6 @@ import './about.css'
 interface aboutProps {}
 
 const About: FC<aboutProps> = () => {
-  function rotate(
-    arg0: number,
-    deg: any
-  ): import('csstype').Property.Transform | undefined {
-    throw new Error('Function not implemented.')
-  }
 
   const aboutImageStyle = {
     width: '300px',
@@ -21,6 +15,22 @@ const About: FC<aboutProps> = () => {
     marginLeft: '50px',
     maxWidth: '100%',
   }
+
+  const name = 'Rasika Deodhar';
+  console.log(name.split(''))
+  // Create an array from the name string, each letter wrapped in a span
+  const letters = name.split('').map((letter, index) => (
+    <span
+      key={index}
+      className='name-letter'
+      style={{ animationDelay: `${index * 0.1}s`, // Stagger the animation delay
+               whiteSpace: letter === ' ' ? 'pre' : 'normal', // Ensure space is preserved 
+        }} 
+    >
+      {letter}
+    </span>
+  ));
+
 
   return (
    <div>
@@ -50,7 +60,7 @@ const About: FC<aboutProps> = () => {
         }}
       >
         <p id='name' style={{ margin: '0' }}>
-          Rasika Deodhar
+          {letters}
         </p>
         <p id='title' style={{ margin: '0' }}>
           Software Engineer by day and a LOT of it by night!
