@@ -1,3 +1,10 @@
 .experience {
-    margin-top: 50px;
+    margin-top: 150px;
+}
+
+.timeline-date-white {
+    color: white;
+}
+.timeline-date-black {
+    color: black;
 }
