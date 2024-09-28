@@ -83,7 +83,7 @@ const About: FC<aboutProps> = () => {
     id='description'
   >
     <div style={{ width: '500px', height: 'auto', textAlign: 'center' }}>
-      I am a software developer with around six years of experience working
+      I am a software developer with 6 years of experience working
       across various technologies and frameworks. Having worn many hats in
       different teams, I’m known as a dependable and versatile team member. I
       enjoy connecting with fellow tech professionals and actively
