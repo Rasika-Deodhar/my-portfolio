@@ -152,12 +152,6 @@ const Experience: FC<experienceProps> = () => {
     setTextColor(newTextColor)
   }, [bgColor]) // Re-run this effect whenever bgColor changes
 
-  // Example of how you might change the background color
-  const changeBackgroundColor = () => {
-    // This could be any logic to update the bgColor
-    setBgColor(bgColor === '#3498db' ? '#f39c12' : '#3498db')
-  }
-
   return (
     <>
       <div className='experience'>
