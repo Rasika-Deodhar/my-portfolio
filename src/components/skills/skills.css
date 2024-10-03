@@ -1,0 +1,10 @@
+.skills {
+    margin-top: 100px;
+    shape-outside: circle(100%);
+    /* clip-path: circle(6rem at 12rem 8rem); */
+
+}
+
+.circle {
+    border-radius: 50%; /* Make the element circular */
+  }

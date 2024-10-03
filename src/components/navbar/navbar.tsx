@@ -30,6 +30,7 @@ const Navbar: FC<navbarProps> = () => {
          <li><Link to="/about" className={activeLink==='about' ? 'active' : ''} onClick={()=> handleClick('about')}>About</Link></li>
          <li><Link to="/experience" className={activeLink==='experience' ? 'active' : ''} onClick={()=> handleClick('experience')}>Experience</Link></li>
          <li><Link to="/contact" className={activeLink==='contact' ? 'active' : ''} onClick={()=> handleClick('contact')}>Contact</Link></li>
+         <li><Link to="/skills" className={activeLink==='skills' ? 'active' : ''} onClick={()=> handleClick('skills')}>Skills</Link></li>
       </ul>
       </div>
    </nav>)

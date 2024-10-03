@@ -1,23 +1,13 @@
-/* Import the font */
-@font-face {
-    font-family: 'Arsenica';
-    src: url('../../../public/arsenica-fonts/ArsenicaTrial-Regular.ttf') format('truetype'); /* Make sure the path matches your font file */
-    font-weight: normal;
-    font-style: normal;
-  }
-  
-
-
 /* Setting the background to white */
 #navbar {
-    background-color: white;
+    background-color: #A86D42;
     padding: 1rem 2rem;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
     position: fixed;
     width: 100%;
     top: 0;
     z-index: 1000;
-    font-family: 'Arsenica', sans-serif;
+    font-family: 'Chillax'
   }
   
   /* Styling the list container */
@@ -50,5 +40,5 @@
   
   /* Adding hover effect */
   a:hover {
-    color: #ff4081; /* Accent color */
+    color: white; /* Accent color */
   }
