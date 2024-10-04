@@ -1,10 +1,12 @@
-.skills {
-    margin-top: 100px;
-    shape-outside: circle(100%);
-    /* clip-path: circle(6rem at 12rem 8rem); */
-
-}
-
-.circle {
-    border-radius: 50%; /* Make the element circular */
+.svg-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #f9f9f9;
   }
+  
+  .circle.skills {
+    width: 100%; /* Make sure it occupies full width */
+    height: 100%;
+  }  
