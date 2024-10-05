@@ -4,9 +4,11 @@
     align-items: center;
     height: 100vh;
     background-color: #f9f9f9;
+    margin-top: 100px;
   }
   
   .circle.skills {
-    width: 100%; /* Make sure it occupies full width */
-    height: 100%;
+    width: 70%; /* Make sure it occupies full width */
+    height: 'auto';
+    margin: 100px auto;
   }  
