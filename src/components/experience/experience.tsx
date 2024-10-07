@@ -31,10 +31,10 @@ const Experience: FC<experienceProps> = () => {
   }, [])
 
   // State to manage background color and text color
-  const [bgColor, setBgColor] = useState('#D3B6A3') // Initial background color
+  const [bgColor] = useState('#D3B6A3') // Initial background color
   const [textColor, setTextColor] = useState('black') // Initial text color
   const [isHovered, setIsHovered] = useState(false)
-  const [hoveredIndex, setHoveredIndex] = useState<number | null>(null) // Single state to track hovered index
+  // const [] = useState<number | null>(null) // Single state to track hovered index
 
   const techStackStyle = {
     marginRight: '5px',
@@ -73,7 +73,7 @@ const Experience: FC<experienceProps> = () => {
       ),
       description: '',
       icon: (
-        <img src='https://media.licdn.com/dms/image/v2/D4E0BAQGDawDsi0V0pA/company-logo_100_100/company-logo_100_100/0/1719858734714/marshmclennan_logo?e=1735776000&v=beta&t=qnPnlffax0WVld4IqUmEZhND9nNZYSUY9CcRtY5BnJo' />
+        <img src='https://media.licdn.com/dms/image/v2/D4E0BAQGDawDsi0V0pA/company-logo_100_100/company-logo_100_100/0/1719858734714/marshmclennan_logo?e=1735776000&v=beta&t=qnPnlffax0WVld4IqUmEZhND9nNZYSUY9CcRtY5BnJo' alt='MMC logo' />
       ),
     },
     {
@@ -89,7 +89,7 @@ const Experience: FC<experienceProps> = () => {
       ),
       description: '',
       icon: (
-        <img src='https://media.licdn.com/dms/image/v2/D4E0BAQFgF4xtqyXBcg/company-logo_100_100/company-logo_100_100/0/1719257286385/citi_logo?e=1735776000&v=beta&t=r7bdpFL280ArCxtV08NDspBxDwQID81zphNuyySDvlQ' />
+        <img src='https://media.licdn.com/dms/image/v2/D4E0BAQFgF4xtqyXBcg/company-logo_100_100/company-logo_100_100/0/1719257286385/citi_logo?e=1735776000&v=beta&t=r7bdpFL280ArCxtV08NDspBxDwQID81zphNuyySDvlQ' alt='Citi Logo'/>
       ),
     },
     {
@@ -106,7 +106,7 @@ const Experience: FC<experienceProps> = () => {
       ),
       description: '',
       icon: (
-        <img src='https://media.licdn.com/dms/image/v2/C560BAQEV9kECiZwXrg/company-logo_200_200/company-logo_200_200/0/1656645409373/informatica_logo?e=1735776000&v=beta&t=H2mg8nEnpOdv_llQIeQf-Qq3V-Leq1ASr9PgrvJ9Jhw' />
+        <img src='https://media.licdn.com/dms/image/v2/C560BAQEV9kECiZwXrg/company-logo_200_200/company-logo_200_200/0/1656645409373/informatica_logo?e=1735776000&v=beta&t=H2mg8nEnpOdv_llQIeQf-Qq3V-Leq1ASr9PgrvJ9Jhw' alt='Citi Logo' />
       ),
     },
     {
@@ -130,6 +130,7 @@ const Experience: FC<experienceProps> = () => {
           src='https://www.xoriant.com/sites/default/files/logo/Xoriant-Logo-Scroll.png'
           width='190%'
           height='auto'
+          alt='Xoriant Logo'
         />
       ),
     },
@@ -163,12 +164,12 @@ const Experience: FC<experienceProps> = () => {
           {experienceTimeline.map((item, index) => (
             <VerticalTimelineElement
               key={index}
-              position={index % 2 == 0 ? 'left' : 'right'}
+              position={index % 2 === 0 ? 'left' : 'right'}
               date={item.date}
               dateClassName={`timeline-date-${textColor}`}
               contentStyle={{
-                background: index % 2 == 0 ? '#D3B6A3' : '#634029',
-                color: index % 2 == 0 ? 'black' : 'white',
+                background: index % 2 === 0 ? '#D3B6A3' : '#634029',
+                color: index % 2 === 0 ? 'black' : 'white',
               }}
               contentArrowStyle={{ borderRight: '7px solid #A86D42' }}
               iconStyle={{

@@ -1,5 +1,4 @@
-import React, { FC } from 'react'
-import { aboutWrapper } from './about.styled'
+import { FC } from 'react'
 import aboutImage from '../../images/about-image.png'
 import cupGif from '../../images/cup_gif.gif'
 import './about.css'
