@@ -1,5 +1,4 @@
-import React, { FC, useEffect, useState } from 'react';
-import { navbarWrapper } from './navbar.styled';
+import { FC, useEffect, useState } from 'react';
 import './navbar.css';
 import { Link, useLocation } from 'react-router-dom';
 
