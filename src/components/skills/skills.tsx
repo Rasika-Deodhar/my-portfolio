@@ -29,26 +29,25 @@ const Skills: FC<SkillsProps> = () => {
       // Comfort zone
       { cx: -20, cy: 0, r: 30, label: 'Python' },
       { cx: 50, cy: -20, r: 30, label: 'Generative AI' },
-      { cx: 40, cy: -85, r: 30, label: 'React' },
+      { cx: 0, cy: -60, r: 30, label: 'React' },
       { cx: 40, cy: 85, r: 30, label: 'Prompting' },
-      { cx: 50, cy: 85, r: 30, label: 'Googling' },
-      { cx: -40, cy: 85, r: 30, label: 'React' },
-      { cx: 55, cy: -75, r: 30, label: 'Typescript' },
-      { cx: 85, cy: 70, r: 30, label: 'Angular' },
+      { cx: 85, cy: 35, r: 30, label: 'Googling' },
+      { cx: 100, cy: -75, r: 30, label: 'Typescript' },
+      { cx: -40, cy: 70, r: 30, label: 'Angular' },
       
       // Growth Zone
-      // { cx: 40, cy: 85, r: 30, label: 'JavaScript' },
-      // { cx: 40, cy: 85, r: 30, label: 'Testing' },
-      // { cx: 40, cy: 85, r: 30, label: 'Vector Search' },
-      // { cx: 40, cy: 85, r: 30, label: 'MongoDB' },
-      // { cx: 40, cy: 85, r: 30, label: 'SQL' },
-      // { cx: 40, cy: 85, r: 30, label: 'Apigee' },
-      // { cx: 40, cy: 85, r: 30, label: 'Java' },
+      { cx: 40, cy: 185, r: 30, label: 'JavaScript' },
+      { cx: -50, cy: -190, r: 30, label: 'Testing' },
+      { cx: -80, cy: 185, r: 30, label: 'Vector Search' },
+      { cx: 200, cy: 95, r: 30, label: 'MongoDB' },
+      { cx: 220, cy: 5, r: 30, label: 'SQL' },
+      { cx: -150, cy: 0, r: 30, label: 'Java' },
 
       // Learning Zone
-      // { cx: 40, cy: 85, r: 30, label: 'Presentation' },
-      // { cx: 40, cy: 85, r: 30, label: 'Open Source Contributions' },
-      // { cx: 40, cy: 85, r: 30, label: 'Business Analysis' },
+      { cx: -270, cy: 85, r: 30, label: 'Apigee' },
+      { cx: -250, cy: -85, r: 30, label: 'Presentation' },
+      { cx: -205, cy: 200, r: 60, label: 'Open Source Contributions' },
+      { cx: -150, cy: -255, r: 50, label: 'Business Analysis' },
 
       // Exploration Zone
       // { cx: 40, cy: 85, r: 30, label: 'Project Management' },
@@ -88,22 +87,22 @@ const Skills: FC<SkillsProps> = () => {
         />
         {/* Multiple text elements at intervals along the spiral */}
         <text fill="#634029" fontSize="24">
-          <textPath href={`#${pathId}`} startOffset="5%">
+          <textPath href={`#${pathId}`} startOffset="6%">
             Comfort Zone
           </textPath>
         </text>
         <text fill="#634029" fontSize="24">
-          <textPath href={`#${pathId}`} startOffset="25%">
+          <textPath href={`#${pathId}`} startOffset="35%">
             Growth Zone
           </textPath>
         </text>
         <text fill="#634029" fontSize="24">
-          <textPath href={`#${pathId}`} startOffset="65%">
+          <textPath href={`#${pathId}`} startOffset="75%">
             Learning Zone
           </textPath>
         </text>
         <text fill="#634029" fontSize="24">
-          <textPath href={`#${pathId}`} startOffset="85%">
+          <textPath href={`#${pathId}`} startOffset="87%">
             Exploration Zone
           </textPath>
         </text>
