@@ -84,6 +84,7 @@ const Experience: FC<experienceProps> = () => {
           <FaAngular style={techStackStyle} />
           <FaJava style={techStackStyle} />
           <BsFiletypeSql style={techStackStyle} />
+          <FaJenkins style={techStackStyle} />
         </>
       ),
       description: "",
