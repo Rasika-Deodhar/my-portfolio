@@ -73,7 +73,7 @@ const Experience: FC<experienceProps> = () => {
       ),
       description: '',
       icon: (
-        <img src='https://media.licdn.com/dms/image/v2/D4E0BAQGDawDsi0V0pA/company-logo_100_100/company-logo_100_100/0/1719858734714/marshmclennan_logo?e=1735776000&v=beta&t=qnPnlffax0WVld4IqUmEZhND9nNZYSUY9CcRtY5BnJo' alt='MMC logo' />
+        <img src='/media/mmc.png' alt='MMC logo' />
       ),
     },
     {
@@ -89,7 +89,7 @@ const Experience: FC<experienceProps> = () => {
       ),
       description: '',
       icon: (
-        <img src='https://media.licdn.com/dms/image/v2/D4E0BAQFgF4xtqyXBcg/company-logo_100_100/company-logo_100_100/0/1719257286385/citi_logo?e=1735776000&v=beta&t=r7bdpFL280ArCxtV08NDspBxDwQID81zphNuyySDvlQ' alt='Citi Logo'/>
+        <img src='/media/citi.png' alt='Citi Logo'/>
       ),
     },
     {
@@ -106,34 +106,34 @@ const Experience: FC<experienceProps> = () => {
       ),
       description: '',
       icon: (
-        <img src='https://media.licdn.com/dms/image/v2/C560BAQEV9kECiZwXrg/company-logo_200_200/company-logo_200_200/0/1656645409373/informatica_logo?e=1735776000&v=beta&t=H2mg8nEnpOdv_llQIeQf-Qq3V-Leq1ASr9PgrvJ9Jhw' alt='Citi Logo' />
+        <img src='/media/informatica.png' alt='Citi Logo' />
       ),
     },
-    {
-      date: 'Jul 2017 - Jul 2019',
-      title: 'Software Developer @ Xoriant',
-      location: 'Pune, India',
-      techStack: (
-        <>
-          <FaAngular style={techStackStyle} />
-          <FaJava style={techStackStyle} />
-          <BsFiletypeSql style={techStackStyle} />
-          <LuFileJson2 style={techStackStyle} />
-          <DiMongodb style={techStackStyle} />
-          <SiSwagger style={techStackStyle} />
-          <FaJenkins style={techStackStyle} />
-        </>
-      ),
-      description: '',
-      icon: (
-        <img
-          src='https://www.xoriant.com/sites/default/files/logo/Xoriant-Logo-Scroll.png'
-          width='190%'
-          height='auto'
-          alt='Xoriant Logo'
-        />
-      ),
-    },
+    // {
+    //   date: 'Jul 2017 - Jul 2019',
+    //   title: 'Software Developer @ Xoriant',
+    //   location: 'Pune, India',
+    //   techStack: (
+    //     <>
+    //       <FaAngular style={techStackStyle} />
+    //       <FaJava style={techStackStyle} />
+    //       <BsFiletypeSql style={techStackStyle} />
+    //       <LuFileJson2 style={techStackStyle} />
+    //       <DiMongodb style={techStackStyle} />
+    //       <SiSwagger style={techStackStyle} />
+    //       <FaJenkins style={techStackStyle} />
+    //     </>
+    //   ),
+    //   description: '',
+    //   icon: (
+    //     <img
+    //       src='https://www.xoriant.com/sites/default/files/logo/Xoriant-Logo-Scroll.png'
+    //       width='190%'
+    //       height='auto'
+    //       alt='Xoriant Logo'
+    //     />
+    //   ),
+    // },
   ]
 
   // Utility function to determine if a color is light or dark
