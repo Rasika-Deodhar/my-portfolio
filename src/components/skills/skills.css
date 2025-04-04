@@ -1,14 +1,14 @@
 .svg-container {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100vh;
-    background-color: #f9f9f9;
-    margin-top: 100px;
-  }
-  
-  .circle.skills {
-    width: 70%; /* Make sure it occupies full width */
-    height: 'auto';
-    margin: 100px auto;
-  }  
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background-color: #f9f9f9;
+  margin-top: 100px;
+}
+
+.circle.skills {
+  width: 70%; /* Make sure it occupies full width */
+  height: "auto";
+  margin: 100px auto;
+}

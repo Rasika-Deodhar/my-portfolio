@@ -1,4 +1,3 @@
-import styled from 'styled-components';
+import styled from "styled-components";
 
-export const loadingWrapper = styled.div`
-`;
+export const loadingWrapper = styled.div``;

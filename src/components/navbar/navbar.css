@@ -1,44 +1,44 @@
 /* Setting the background to white */
 #navbar {
-    background-color: #A86D42;
-    padding: 1rem 2rem;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-    position: fixed;
-    width: 100%;
-    top: 0;
-    z-index: 1000;
-    font-family: 'Chillax'
-  }
-  
-  /* Styling the list container */
-  ul {
-    display: flex;
-    justify-content: center; /* Center the items */
-    list-style: none;
-    padding: 0;
-    margin: 0;
-    gap: 2rem; /* Add spacing between items */
-  }
-  
-  /* Styling the list items */
-  li {
-    display: inline-block;
-  }
-  
-  /* Removing default link styles and making the text black */
-  a {
-    text-decoration: none;
-    color: black;
-    font-size: 1.1rem;
-    transition: color 0.3s ease;
-  }
-  
-  /* Styling for the active link */
-  .active {
-    font-weight: bold;
-  }
-  
-  /* Adding hover effect */
-  a:hover {
-    color: white; /* Accent color */
-  }
+  background-color: #a86d42;
+  padding: 1rem 2rem;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  position: fixed;
+  width: 100%;
+  top: 0;
+  z-index: 1000;
+  font-family: "Chillax";
+}
+
+/* Styling the list container */
+ul {
+  display: flex;
+  justify-content: center; /* Center the items */
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  gap: 2rem; /* Add spacing between items */
+}
+
+/* Styling the list items */
+li {
+  display: inline-block;
+}
+
+/* Removing default link styles and making the text black */
+a {
+  text-decoration: none;
+  color: black;
+  font-size: 1.1rem;
+  transition: color 0.3s ease;
+}
+
+/* Styling for the active link */
+.active {
+  font-weight: bold;
+}
+
+/* Adding hover effect */
+a:hover {
+  color: white; /* Accent color */
+}

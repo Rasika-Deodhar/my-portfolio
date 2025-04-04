@@ -1,5 +1,5 @@
-import React, { FC } from 'react';
-import './skills.css';
+import React, { FC } from "react";
+import "./skills.css";
 
 interface SkillsProps {}
 
@@ -16,63 +16,61 @@ const Skills: FC<SkillsProps> = () => {
     const y = radius * Math.sin(angle);
     spiralPath.push(`${x},${y}`);
 
-     // Log the coordinates to inspect
-      if (i % 10 === 0) {
-         console.log(`Point ${i}: x = ${x}, y = ${y}`);
-      }
+    // Log the coordinates to inspect
+    if (i % 10 === 0) {
+      console.log(`Point ${i}: x = ${x}, y = ${y}`);
+    }
   }
-  
+
   const spiralPoints = spiralPath.join(" ");
-  console.log(spiralPoints)
+  console.log(spiralPoints);
 
-   const circles = [
-      // Comfort zone
-      { cx: -20, cy: 0, r: 30, label: 'Python' },
-      { cx: 50, cy: -20, r: 30, label: 'Generative AI' },
-      { cx: 0, cy: -60, r: 30, label: 'React' },
-      { cx: 40, cy: 85, r: 30, label: 'Prompting' },
-      { cx: 85, cy: 35, r: 30, label: 'Googling' },
-      { cx: 100, cy: -75, r: 30, label: 'Typescript' },
-      { cx: -40, cy: 70, r: 30, label: 'Angular' },
-      
-      // Growth Zone
-      { cx: 40, cy: 185, r: 30, label: 'JavaScript' },
-      { cx: -50, cy: -190, r: 30, label: 'Testing' },
-      { cx: -80, cy: 185, r: 30, label: 'Vector Search' },
-      { cx: 200, cy: 95, r: 30, label: 'MongoDB' },
-      { cx: 220, cy: 5, r: 30, label: 'SQL' },
-      { cx: -150, cy: 0, r: 30, label: 'Java' },
+  const circles = [
+    // Comfort zone
+    { cx: -20, cy: 0, r: 30, label: "Python" },
+    { cx: 50, cy: -20, r: 30, label: "Generative AI" },
+    { cx: 0, cy: -60, r: 30, label: "React" },
+    { cx: 40, cy: 85, r: 30, label: "Prompting" },
+    { cx: 85, cy: 35, r: 30, label: "Googling" },
+    { cx: 100, cy: -75, r: 30, label: "Typescript" },
+    { cx: -40, cy: 70, r: 30, label: "Angular" },
 
-      // Learning Zone
-      { cx: -270, cy: 85, r: 30, label: 'Apigee' },
-      { cx: -250, cy: -85, r: 30, label: 'Presentation' },
-      { cx: -205, cy: 200, r: 60, label: 'Open Source Contributions' },
-      { cx: -150, cy: -255, r: 50, label: 'Business Analysis' },
+    // Growth Zone
+    { cx: 40, cy: 185, r: 30, label: "JavaScript" },
+    { cx: -50, cy: -190, r: 30, label: "Testing" },
+    { cx: -80, cy: 185, r: 30, label: "Vector Search" },
+    { cx: 200, cy: 95, r: 30, label: "MongoDB" },
+    { cx: 220, cy: 5, r: 30, label: "SQL" },
+    { cx: -150, cy: 0, r: 30, label: "Java" },
 
-      // Exploration Zone
-      // { cx: 40, cy: 85, r: 30, label: 'Project Management' },
-      // { cx: 40, cy: 85, r: 30, label: 'Business Analysis' },
-      // { cx: 40, cy: 85, r: 30, label: 'Data Analysis' },
-      // { cx: 40, cy: 85, r: 30, label: 'Cyber Security' },
+    // Learning Zone
+    { cx: -270, cy: 85, r: 30, label: "Apigee" },
+    { cx: -250, cy: -85, r: 30, label: "Presentation" },
+    { cx: -205, cy: 200, r: 60, label: "Open Source Contributions" },
+    { cx: -150, cy: -255, r: 50, label: "Business Analysis" },
 
-    ].map((circle, index) => (
-      <g key={index}>
-        {/* Circle */}
-        <circle cx={circle.cx} cy={circle.cy} r={circle.r} fill="#A86D42" />
-        {/* Text inside circle */}
-        <text
-          x={circle.cx}
-          y={circle.cy}
-          fill="#fff"                // Text color
-          fontSize="10"              // Adjust font size
-          textAnchor="middle"        // Horizontally center the text
-          alignmentBaseline="middle" // Vertically center the text
-        >
-          {circle.label}
-        </text>
-      </g>
-    ));
- 
+    // Exploration Zone
+    // { cx: 40, cy: 85, r: 30, label: 'Project Management' },
+    // { cx: 40, cy: 85, r: 30, label: 'Business Analysis' },
+    // { cx: 40, cy: 85, r: 30, label: 'Data Analysis' },
+    // { cx: 40, cy: 85, r: 30, label: 'Cyber Security' },
+  ].map((circle, index) => (
+    <g key={index}>
+      {/* Circle */}
+      <circle cx={circle.cx} cy={circle.cy} r={circle.r} fill="#A86D42" />
+      {/* Text inside circle */}
+      <text
+        x={circle.cx}
+        y={circle.cy}
+        fill="#fff" // Text color
+        fontSize="10" // Adjust font size
+        textAnchor="middle" // Horizontally center the text
+        alignmentBaseline="middle" // Vertically center the text
+      >
+        {circle.label}
+      </text>
+    </g>
+  ));
 
   return (
     <div className="svg-container circle skills">
@@ -81,7 +79,7 @@ const Skills: FC<SkillsProps> = () => {
         <path
           id={pathId}
           d={`M ${spiralPoints}`}
-          stroke="#D3A588"  /* Lighter color for the spiral */
+          stroke="#D3A588" /* Lighter color for the spiral */
           strokeWidth="50"
           fill="none"
         />

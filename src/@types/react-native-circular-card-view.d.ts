@@ -1,1 +1,1 @@
-declare module 'react-native-circular-card-view';
+declare module "react-native-circular-card-view";

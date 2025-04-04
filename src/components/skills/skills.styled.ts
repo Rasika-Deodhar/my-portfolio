@@ -1,4 +1,3 @@
-import styled from 'styled-components';
+import styled from "styled-components";
 
-export const skillsWrapper = styled.div`
-`;
+export const skillsWrapper = styled.div``;

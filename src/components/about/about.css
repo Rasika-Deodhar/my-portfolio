@@ -1,77 +1,79 @@
 /* Animation for image sliding in from the left */
 @keyframes slideInLeft {
-    from {
-      transform: translateX(-100%);
-      opacity: 0;
-    }
-    to {
-      opacity: 1;
-    }
+  from {
+    transform: translateX(-100%);
+    opacity: 0;
   }
-  
-  /* Animation for name and title sliding in from the right */
-  @keyframes slideInRight {
-    from {
-      transform: translateX(100%);
-      opacity: 0;
-    }
-    to {
-      transform: translateX(0);
-      opacity: 1;
-    }
+  to {
+    opacity: 1;
   }
+}
+
+/* Animation for name and title sliding in from the right */
+@keyframes slideInRight {
+  from {
+    transform: translateX(100%);
+    opacity: 0;
+  }
+  to {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
 
 /* Import the font */
 @font-face {
-    font-family: 'Arsenica';
-    src: url('../../../public/arsenica-fonts/ArsenicaTrial-Regular.ttf') format('truetype'); /* Make sure the path matches your font file */
-    font-weight: normal;
-    font-style: normal;
-  }
+  font-family: "Arsenica";
+  src: url("../../../public/arsenica-fonts/ArsenicaTrial-Regular.ttf")
+    format("truetype"); /* Make sure the path matches your font file */
+  font-weight: normal;
+  font-style: normal;
+}
 @font-face {
-    font-family: 'Chillax';
-    src: url('../../../public/Chillax_Complete/Fonts/WEB/fonts/Chillax-Regular.ttf') format('truetype'); /* Make sure the path matches your font file */
-    font-weight: normal;
-    font-style: normal;
-  }
+  font-family: "Chillax";
+  src: url("../../../public/Chillax_Complete/Fonts/WEB/fonts/Chillax-Regular.ttf")
+    format("truetype"); /* Make sure the path matches your font file */
+  font-weight: normal;
+  font-style: normal;
+}
 
 .about-image {
-    width:'250px';
-    height:'100px'; 
-    margin-top:'100px'; 
-    transform: rotate(-22Deg);
-    animation: slideInLeft 1s ease-in-out forwards;
+  width: "250px";
+  height: "100px";
+  margin-top: "100px";
+  transform: rotate(-22deg);
+  animation: slideInLeft 1s ease-in-out forwards;
 }
 
 .nameAndTitle {
-    margin-left: '50px';
-    font-family: 'Arsenica';
+  margin-left: "50px";
+  font-family: "Arsenica";
 }
 
 .nameAndTitle #name {
-    font-size: 70px;
-    font-weight: bold;
-    animation: ease-in-out forwards;
-    animation-duration: 3s;
+  font-size: 70px;
+  font-weight: bold;
+  animation: ease-in-out forwards;
+  animation-duration: 3s;
 }
 
 /* Apply animation to each letter */
 .name-letter {
-    display: inline-block;
-    opacity: 0; /* Start invisible */
-    animation: slideInRight 0.5s ease-in-out forwards;
-    animation-duration: 3s;
-  }
+  display: inline-block;
+  opacity: 0; /* Start invisible */
+  animation: slideInRight 0.5s ease-in-out forwards;
+  animation-duration: 3s;
+}
 
 .nameAndTitle #title {
-    font-family: 'Chillax';
-    font-size: large;
-    animation: slideInRight 0.5s ease-in-out forwards;
-    animation-duration: 3s;
+  font-family: "Chillax";
+  font-size: large;
+  animation: slideInRight 0.5s ease-in-out forwards;
+  animation-duration: 3s;
 }
 
 #description {
-    font-family: 'Chillax';
-    font-size: large;
-    font-weight: lighter;
+  font-family: "Chillax";
+  font-size: large;
+  font-weight: lighter;
 }

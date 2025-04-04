@@ -1,5 +1,5 @@
-import { FC, useState } from 'react'
-import './contact.css'
+import { FC, useState } from "react";
+import "./contact.css";
 import {
   Card,
   CardActionArea,
@@ -9,20 +9,20 @@ import {
   useTheme,
   useMediaQuery,
   Box,
-} from '@mui/material'
-import ReactCardFlip from 'react-card-flip'
-import BraggedImage from '../../images/B1.png'
-import GitpitImage from '../../images/G1.png'
-import XImage from '../../images/X1.png'
-import LinkedIn from '../../images/LinkedIn.png'
-import Github from '../../images/github-mark.png'
-import X from '../../images/X-logo-black.png'
+} from "@mui/material";
+import ReactCardFlip from "react-card-flip";
+import BraggedImage from "../../images/B1.png";
+import GitpitImage from "../../images/G1.png";
+import XImage from "../../images/X1.png";
+import LinkedIn from "../../images/LinkedIn.png";
+import Github from "../../images/github-mark.png";
+import X from "../../images/X-logo-black.png";
 
 interface contactProps {}
 
 const Contact: FC<contactProps> = () => {
   const theme = useTheme();
-  const isSmallScreen = useMediaQuery(theme.breakpoints.down('sm'));
+  const isSmallScreen = useMediaQuery(theme.breakpoints.down("sm"));
 
   const cardStyle = {
     border: "1px solid black",
@@ -30,7 +30,7 @@ const Contact: FC<contactProps> = () => {
     margin: "20px",
     width: isSmallScreen ? "100%" : "350px", // Full width on small screens
     height: isSmallScreen ? "auto" : "250px", // Auto height on small screens
-    fontFamily: 'Chillax',
+    fontFamily: "Chillax",
   };
 
   const [isLinkedinFlipped, setIsisLinkedinFlipped] = useState(false);
@@ -70,31 +70,45 @@ const Contact: FC<contactProps> = () => {
         margin="0 auto" // Centers the container horizontally
       >
         <Box flex="1 1 300px" maxWidth={350}>
-          <ReactCardFlip isFlipped={isLinkedinFlipped} flipDirection="horizontal">
+          <ReactCardFlip
+            isFlipped={isLinkedinFlipped}
+            flipDirection="horizontal"
+          >
             <Card style={cardStyle}>
               <CardActionArea onClick={handleLinkedinClick}>
-                <CardMedia component="img" image={BraggedImage} alt="braggedin" />
+                <CardMedia
+                  component="img"
+                  image={BraggedImage}
+                  alt="braggedin"
+                />
                 <CardContent>
-                  <Typography gutterBottom variant="h5" component="div" fontFamily="Chillax">
+                  <Typography
+                    gutterBottom
+                    variant="h5"
+                    component="div"
+                    fontFamily="Chillax"
+                  >
                     For all the subtle flex and self-promotion. 😎
                   </Typography>
                 </CardContent>
               </CardActionArea>
             </Card>
             <Card style={cardStyle}>
-              <CardActionArea onClick={handleLinkedinClick}
-              sx={{
-                display: 'flex',
-                flexDirection: 'column', // Stack items vertically
-                justifyContent: 'center', // Center vertically
-                alignItems: 'center', // Center horizontally
-                textAlign: 'center', // Ensure text is centered
-              }}>
+              <CardActionArea
+                onClick={handleLinkedinClick}
+                sx={{
+                  display: "flex",
+                  flexDirection: "column", // Stack items vertically
+                  justifyContent: "center", // Center vertically
+                  alignItems: "center", // Center horizontally
+                  textAlign: "center", // Ensure text is centered
+                }}
+              >
                 <CardMedia
                   component="img"
                   image={LinkedIn}
                   alt="linkedin"
-                  style={{ marginLeft: '1px', width: '235px', height: '200px' }}
+                  style={{ marginLeft: "1px", width: "235px", height: "200px" }}
                 />
                 <Typography
                   gutterBottom
@@ -103,11 +117,11 @@ const Contact: FC<contactProps> = () => {
                   href="https://www.linkedin.com/in/rasika-deodhar/"
                   target="_blank"
                   fontFamily="Chillax"
-                  sx ={{
-                    transition: 'color 0.3s ease, transform 0.3s ease',
-                    '&:hover': {
-                      color: '#A86D42 !important', // Force color change
-                      transform: 'scale(1.05)'
+                  sx={{
+                    transition: "color 0.3s ease, transform 0.3s ease",
+                    "&:hover": {
+                      color: "#A86D42 !important", // Force color change
+                      transform: "scale(1.05)",
                     },
                   }}
                 >
@@ -124,26 +138,33 @@ const Contact: FC<contactProps> = () => {
               <CardActionArea onClick={handleGithubClick}>
                 <CardMedia component="img" image={GitpitImage} alt="Github" />
                 <CardContent>
-                  <Typography gutterBottom variant="h5" component="div" fontFamily="Chillax">
+                  <Typography
+                    gutterBottom
+                    variant="h5"
+                    component="div"
+                    fontFamily="Chillax"
+                  >
                     Place where all abandoned projects fall into. 🥲
                   </Typography>
                 </CardContent>
               </CardActionArea>
             </Card>
             <Card style={cardStyle}>
-              <CardActionArea onClick={handleGithubClick}
-              sx={{
-                display: 'flex',
-                flexDirection: 'column', // Stack items vertically
-                justifyContent: 'center', // Center vertically
-                alignItems: 'center', // Center horizontally
-                textAlign: 'center', // Ensure text is centered
-              }}>
+              <CardActionArea
+                onClick={handleGithubClick}
+                sx={{
+                  display: "flex",
+                  flexDirection: "column", // Stack items vertically
+                  justifyContent: "center", // Center vertically
+                  alignItems: "center", // Center horizontally
+                  textAlign: "center", // Ensure text is centered
+                }}
+              >
                 <CardMedia
                   component="img"
                   image={Github}
                   alt="github"
-                  style={{ marginLeft: '1px', width: '200px', height: '200px' }}
+                  style={{ marginLeft: "1px", width: "200px", height: "200px" }}
                 />
                 <Typography
                   gutterBottom
@@ -152,11 +173,11 @@ const Contact: FC<contactProps> = () => {
                   href="https://github.com/Rasika-Deodhar"
                   target="_blank"
                   fontFamily="Chillax"
-                  sx ={{
-                    transition: 'color 0.3s ease, transform 0.3s ease',
-                    '&:hover': {
-                      color: '#A86D42 !important', // Force color change
-                      transform: 'scale(1.05)'
+                  sx={{
+                    transition: "color 0.3s ease, transform 0.3s ease",
+                    "&:hover": {
+                      color: "#A86D42 !important", // Force color change
+                      transform: "scale(1.05)",
                     },
                   }}
                 >
@@ -173,26 +194,33 @@ const Contact: FC<contactProps> = () => {
               <CardActionArea onClick={handleXClick}>
                 <CardMedia component="img" image={XImage} alt="X" />
                 <CardContent>
-                  <Typography gutterBottom variant="h5" component="div" fontFamily="Chillax">
+                  <Typography
+                    gutterBottom
+                    variant="h5"
+                    component="div"
+                    fontFamily="Chillax"
+                  >
                     Caffeinated coders sharing thoughts. 🙃
                   </Typography>
                 </CardContent>
               </CardActionArea>
             </Card>
             <Card style={cardStyle}>
-              <CardActionArea onClick={handleXClick}
-              sx={{
-                display: 'flex',
-                flexDirection: 'column', // Stack items vertically
-                justifyContent: 'center', // Center vertically
-                alignItems: 'center', // Center horizontally
-                textAlign: 'center', // Ensure text is centered
-              }}>
+              <CardActionArea
+                onClick={handleXClick}
+                sx={{
+                  display: "flex",
+                  flexDirection: "column", // Stack items vertically
+                  justifyContent: "center", // Center vertically
+                  alignItems: "center", // Center horizontally
+                  textAlign: "center", // Ensure text is centered
+                }}
+              >
                 <CardMedia
                   component="img"
                   image={X}
                   alt="x"
-                  style={{ marginLeft: '1px', width: '200px', height: '200px' }}
+                  style={{ marginLeft: "1px", width: "200px", height: "200px" }}
                 />
                 <Typography
                   gutterBottom
@@ -201,11 +229,11 @@ const Contact: FC<contactProps> = () => {
                   href="https://x.com/MoodLearner"
                   target="_blank"
                   fontFamily="Chillax"
-                  sx ={{
-                    transition: 'color 0.3s ease, transform 0.3s ease',
-                    '&:hover': {
-                      color: '#A86D42 !important', // Force color change
-                      transform: 'scale(1.05)'
+                  sx={{
+                    transition: "color 0.3s ease, transform 0.3s ease",
+                    "&:hover": {
+                      color: "#A86D42 !important", // Force color change
+                      transform: "scale(1.05)",
                     },
                   }}
                 >
@@ -218,6 +246,6 @@ const Contact: FC<contactProps> = () => {
       </Box>
     </Box>
   );
-}
+};
 
 export default Contact;

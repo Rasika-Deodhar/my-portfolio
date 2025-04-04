@@ -1,8 +1,10 @@
-import React, { lazy, Suspense } from 'react';
+import React, { lazy, Suspense } from "react";
 
-const Lazyloading = lazy(() => import('./loading'));
+const Lazyloading = lazy(() => import("./loading"));
 
-const loading = (props: JSX.IntrinsicAttributes & { children?: React.ReactNode; }) => (
+const loading = (
+  props: JSX.IntrinsicAttributes & { children?: React.ReactNode },
+) => (
   <Suspense fallback={null}>
     <Lazyloading {...props} />
   </Suspense>
