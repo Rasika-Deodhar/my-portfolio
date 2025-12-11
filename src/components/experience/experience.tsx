@@ -1,4 +1,4 @@
-import React, { FC, useEffect, useState } from "react";
+import React, { FC, useState } from "react";
 import "./experience.css";
 import mermaid from "mermaid";
 import {
@@ -33,9 +33,6 @@ const Experience: FC<experienceProps> = () => {
     mermaid.contentLoaded();
   }, []);
 
-  // State to manage background color and hover
-  const [bgColor] = useState("#D3B6A3"); // Initial background color (unused for theme)
-  const { isDark } = useTheme();
   const [isHovered, setIsHovered] = useState(false);
   // const [] = useState<number | null>(null) // Single state to track hovered index
 
