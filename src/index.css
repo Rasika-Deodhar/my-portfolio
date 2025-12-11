@@ -11,3 +11,35 @@ code {
   font-family:
     source-code-pro, Menlo, Monaco, Consolas, "Courier New", monospace;
 }
+
+:root {
+  --bg: #ffffff;
+  --text: #1f1f1f;
+  --card: #D3B6A3; /* primary card background */
+  --accent: #634029; /* alternate card background */
+  --accent-text: #ffffff;
+  --muted: #7a5b50;
+  /* add more variables as needed */
+}
+
+[data-theme="dark"] {
+  --bg: #0f1115;
+  --text: #edf2f7;
+  --card: #17181a;
+  --accent: #D3B6A3;
+  --accent-text: #1f1f1f;
+  --muted: #b8a39a;
+  --vertical-timeline-line: var(--text);
+}
+
+/* then use variables in components */
+body {
+  background: var(--bg);
+  color: var(--text);
+}
+
+/* example */
+.project-card {
+  background: var(--card);
+  color: var(--text);
+}

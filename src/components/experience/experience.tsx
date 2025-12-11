@@ -22,6 +22,9 @@ import { LuFileJson2 } from "react-icons/lu";
 import apigeeLogo from "../../images/apigee_image.png";
 import { SiSwagger, SiGithubactions } from "react-icons/si";
 
+
+import { useTheme } from "../../context/ThemeContext";
+
 interface experienceProps {}
 
 const Experience: FC<experienceProps> = () => {
@@ -30,9 +33,9 @@ const Experience: FC<experienceProps> = () => {
     mermaid.contentLoaded();
   }, []);
 
-  // State to manage background color and text color
-  const [bgColor] = useState("#D3B6A3"); // Initial background color
-  const [textColor, setTextColor] = useState("black"); // Initial text color
+  // State to manage background color and hover
+  const [bgColor] = useState("#D3B6A3"); // Initial background color (unused for theme)
+  const { isDark } = useTheme();
   const [isHovered, setIsHovered] = useState(false);
   // const [] = useState<number | null>(null) // Single state to track hovered index
 
@@ -133,39 +136,21 @@ const Experience: FC<experienceProps> = () => {
   ];
 
   // Utility function to determine if a color is light or dark
-  const isColorDark = (bgColor: string) => {
-    // Convert hex color to RGB
-    const hex = bgColor.replace("#", "");
-    const r = parseInt(hex.substring(0, 2), 16);
-    const g = parseInt(hex.substring(2, 4), 16);
-    const b = parseInt(hex.substring(4, 6), 16);
-
-    // Calculate the relative luminance
-    const luminance = 0.2126 * r + 0.7152 * g + 0.0722 * b;
-
-    // Return true if the color is dark, else false
-    return luminance < 140; // You can adjust the threshold if needed
-  };
-
-  // Update text color based on the current bgColor
-  useEffect(() => {
-    const newTextColor = isColorDark(bgColor) ? "white" : "black";
-    setTextColor(newTextColor);
-  }, [bgColor]); // Re-run this effect whenever bgColor changes
+  // No effect needed: colors come from CSS variables (data-theme)
 
   return (
     <>
       <div className="experience">
-        <VerticalTimeline lineColor="black">
+        <VerticalTimeline lineColor="var(--text)">
           {experienceTimeline.map((item, index) => (
             <VerticalTimelineElement
               key={index}
               position={index % 2 === 0 ? "left" : "right"}
               date={item.date}
-              dateClassName={`timeline-date-${textColor}`}
+              dateClassName={`timeline-date`}
               contentStyle={{
-                background: index % 2 === 0 ? "#D3B6A3" : "#634029",
-                color: index % 2 === 0 ? "black" : "white",
+                background: index % 2 === 0 ? "var(--card)" : "var(--accent)",
+                color: index % 2 === 0 ? "var(--text)" : "var(--accent-text)",
               }}
               contentArrowStyle={{ borderRight: "7px solid #A86D42" }}
               iconStyle={{

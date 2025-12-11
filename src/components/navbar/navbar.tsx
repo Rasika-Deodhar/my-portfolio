@@ -1,6 +1,7 @@
 import { FC, useEffect, useState } from "react";
 import "./navbar.css";
 import { Link, useLocation } from "react-router-dom";
+import ThemeToggle from "../themeToggle/themeToggle";
 
 interface navbarProps {}
 
@@ -71,6 +72,9 @@ const Navbar: FC<navbarProps> = () => {
             </Link>
           </li>
         </ul>
+        <div className="theme-toggle">
+            <ThemeToggle />
+        </div>
       </div>
     </nav>
   );

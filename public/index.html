@@ -9,6 +9,19 @@
       name="description"
       content="Web site created using create-react-app"
     />
+    <!-- Prevent theme flash: set data-theme from localStorage before React mounts -->
+    <script>
+      (function(){
+        try {
+          var v = localStorage.getItem('theme:isDark');
+          if (v === 'true') document.documentElement.setAttribute('data-theme', 'dark');
+          else if (v === 'false') document.documentElement.setAttribute('data-theme', 'light');
+          else if (window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches) {
+            document.documentElement.setAttribute('data-theme', 'dark');
+          }
+        } catch (e) { /* ignore */ }
+      })();
+    </script>
     <link rel="apple-touch-icon" href="%PUBLIC_URL%/logo192.png" />
     <!--
       manifest.json provides metadata used when your web app is installed on a

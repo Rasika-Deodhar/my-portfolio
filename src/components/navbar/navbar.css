@@ -42,3 +42,11 @@ a {
 a:hover {
   color: white; /* Accent color */
 }
+
+/* Theme toggle button styles */
+.theme-toggle {
+  padding-top: 0px;
+  margin-top: -20px;
+  margin-right: 50px;
+  float:right;
+}

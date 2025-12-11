@@ -3,9 +3,11 @@
   font-family: "Chillax";
 }
 
-.timeline-date-white {
-  color: white;
+.timeline-date {
+  /* color of the date should follow the theme text color */
+  color: var(--text) !important;
 }
-.timeline-date-black {
-  color: black;
+
+.vertical-timeline-element-content {
+  transition: background 200ms ease, color 200ms ease;
 }
