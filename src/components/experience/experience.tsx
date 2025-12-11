@@ -22,9 +22,6 @@ import { LuFileJson2 } from "react-icons/lu";
 import apigeeLogo from "../../images/apigee_image.png";
 import { SiSwagger, SiGithubactions } from "react-icons/si";
 
-
-import { useTheme } from "../../context/ThemeContext";
-
 interface experienceProps {}
 
 const Experience: FC<experienceProps> = () => {
@@ -105,31 +102,31 @@ const Experience: FC<experienceProps> = () => {
       description: "",
       icon: <img src="/media/informatica.png" alt="Citi Logo" />,
     },
-    // {
-    //   date: 'Jul 2017 - Jul 2019',
-    //   title: 'Software Developer @ Xoriant',
-    //   location: 'Pune, India',
-    //   techStack: (
-    //     <>
-    //       <FaAngular style={techStackStyle} />
-    //       <FaJava style={techStackStyle} />
-    //       <BsFiletypeSql style={techStackStyle} />
-    //       <LuFileJson2 style={techStackStyle} />
-    //       <DiMongodb style={techStackStyle} />
-    //       <SiSwagger style={techStackStyle} />
-    //       <FaJenkins style={techStackStyle} />
-    //     </>
-    //   ),
-    //   description: '',
-    //   icon: (
-    //     <img
-    //       src='https://www.xoriant.com/sites/default/files/logo/Xoriant-Logo-Scroll.png'
-    //       width='190%'
-    //       height='auto'
-    //       alt='Xoriant Logo'
-    //     />
-    //   ),
-    // },
+    {
+      date: 'Jul 2017 - Jul 2019',
+      title: 'Software Developer @ Xoriant',
+      location: 'Pune, India',
+      techStack: (
+        <>
+          <FaAngular style={techStackStyle} />
+          <FaJava style={techStackStyle} />
+          <BsFiletypeSql style={techStackStyle} />
+          <LuFileJson2 style={techStackStyle} />
+          <DiMongodb style={techStackStyle} />
+          <SiSwagger style={techStackStyle} />
+          <FaJenkins style={techStackStyle} />
+        </>
+      ),
+      description: '',
+      icon: (
+        <img
+          src='https://www.xoriant.com/sites/default/files/logo/Xoriant-Logo-Scroll.png'
+          width='190%'
+          height='auto'
+          alt='Xoriant Logo'
+        />
+      ),
+    },
   ];
 
   // Utility function to determine if a color is light or dark
@@ -146,8 +143,8 @@ const Experience: FC<experienceProps> = () => {
               date={item.date}
               dateClassName={`timeline-date`}
               contentStyle={{
-                background: index % 2 === 0 ? "var(--card)" : "var(--accent)",
-                color: index % 2 === 0 ? "var(--text)" : "var(--accent-text)",
+                background: index % 2 === 0 ? "#D3B6A3" : "#634029",
+                color: index % 2 === 0 ? "black" : "white",
               }}
               contentArrowStyle={{ borderRight: "7px solid #A86D42" }}
               iconStyle={{
