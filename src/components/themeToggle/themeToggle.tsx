@@ -13,7 +13,8 @@ const ThemeToggle: FC = () => {
       }`}
       aria-label="Toggle theme"
     >
-      {isDark ? <Sun size={24} color="black"/> : <Moon size={24} color="black" />}
+      {/* TODO: On hover change the color of toggle */}
+      {isDark ? <Sun id="theme-toggle" size={24} color="black"/> : <Moon id="theme-toggle" size={24} color="black" />}
     </div>
   );
 };

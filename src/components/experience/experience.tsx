@@ -102,31 +102,31 @@ const Experience: FC<experienceProps> = () => {
       description: "",
       icon: <img src="/media/informatica.png" alt="Citi Logo" />,
     },
-    {
-      date: 'Jul 2017 - Jul 2019',
-      title: 'Software Developer @ Xoriant',
-      location: 'Pune, India',
-      techStack: (
-        <>
-          <FaAngular style={techStackStyle} />
-          <FaJava style={techStackStyle} />
-          <BsFiletypeSql style={techStackStyle} />
-          <LuFileJson2 style={techStackStyle} />
-          <DiMongodb style={techStackStyle} />
-          <SiSwagger style={techStackStyle} />
-          <FaJenkins style={techStackStyle} />
-        </>
-      ),
-      description: '',
-      icon: (
-        <img
-          src='https://www.xoriant.com/sites/default/files/logo/Xoriant-Logo-Scroll.png'
-          width='190%'
-          height='auto'
-          alt='Xoriant Logo'
-        />
-      ),
-    },
+    // {
+    //   date: 'Jul 2017 - Jul 2019',
+    //   title: 'Software Developer @ Xoriant',
+    //   location: 'Pune, India',
+    //   techStack: (
+    //     <>
+    //       <FaAngular style={techStackStyle} />
+    //       <FaJava style={techStackStyle} />
+    //       <BsFiletypeSql style={techStackStyle} />
+    //       <LuFileJson2 style={techStackStyle} />
+    //       <DiMongodb style={techStackStyle} />
+    //       <SiSwagger style={techStackStyle} />
+    //       <FaJenkins style={techStackStyle} />
+    //     </>
+    //   ),
+    //   description: '',
+    //   icon: (
+    //     <img
+    //       src='https://www.xoriant.com/sites/default/files/logo/Xoriant-Logo-Scroll.png'
+    //       width='190%'
+    //       height='auto'
+    //       alt='Xoriant Logo'
+    //     />
+    //   ),
+    // },
   ];
 
   // Utility function to determine if a color is light or dark
