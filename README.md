@@ -10,6 +10,7 @@ A portfolio website to describe myself and skills I possess and am eager to lear
 # Template Creation
 
 Created a template using [Canva](https://www.canva.com/) - [Rasika Deodhar](https://rasikadeodhar.my.canva.site/)
+
 Purchased domain name with [Netlify](https://www.netlify.com/) - [Rasika Deodhar](https://rasikadeodhar.com/)
 
 # Getting Started with Create React App
