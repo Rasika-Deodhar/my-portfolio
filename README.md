@@ -1,7 +1,6 @@
 # Latest
 
-- About page created
-- Need to fix responsiveness
+- New Look - Thanks to Claude Design and Claude Code!
 
 # my-portfolio
 
