@@ -26,8 +26,8 @@ const JOBS: Job[] = [
     dates: "Oct 2022 – Jul 2024",
     place: "Dublin, IE",
     summary:
-      "Shipped company-wide GenAI: an LLM chatbot (LenAI) and RAG document-extraction that cut manual data entry 40%. Built PoCs on GPT/Llama + vector DBs and onboarded 100+ employees to the GenAI framework.",
-    tags: ["RAG", "LangChain", "OpenAI", "Pinecone", "Apigee"],
+      "Shipped company-wide GenAI: an LLM chatbot (LenAI) and RAG document-extraction that cut manual data entry 40%. Built PoCs on GPT + vector DBs and onboarded 100+ employees to the GenAI framework.",
+    tags: ["RAG", "LangChain", "OpenAI", "Vector DB", "Apigee"],
   },
   {
     company: "Citi",
