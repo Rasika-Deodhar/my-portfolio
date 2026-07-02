@@ -1,4 +1,184 @@
-.contact {
-  margin-top: 100px;
-  font-family: "Chillax";
+.pf-contact {
+  border-top: 1px solid var(--line);
+}
+
+/* Main "Say Hello" area */
+.pf-contact__main {
+  padding-top: var(--section-pad);
+  padding-bottom: var(--section-pad);
+  padding-left: clamp(16px, 5vw, 48px);
+  padding-right: clamp(16px, 5vw, 48px);
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+}
+
+.pf-contact__main .pf-section-label {
+  margin-bottom: 20px;
+}
+
+.pf-contact__heading {
+  font-size: clamp(2.2rem, 6vw, 4rem);
+  font-weight: 700;
+  letter-spacing: -0.03em;
+  color: var(--fg);
+  line-height: 1.08;
+  margin-bottom: 16px;
+}
+
+.pf-contact__sub {
+  font-family: var(--font-mono);
+  font-size: 0.78rem;
+  color: var(--faint);
+  margin-bottom: 32px;
+}
+
+.pf-contact__cards {
+  display: flex;
+  gap: 14px;
+  flex-wrap: wrap;
+}
+
+.pf-contact__card {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 220px;
+  padding: 16px 18px 14px;
+  border: 1px solid var(--line-strong);
+  border-radius: 10px;
+  text-decoration: none;
+  background: transparent;
+  transition: border-color 0.18s ease, background 0.18s ease, transform 0.18s ease;
+}
+
+.pf-contact__card:hover {
+  border-color: var(--fg);
+  background: var(--surface);
+  transform: translateY(-2px);
+  text-decoration: none;
+}
+
+.pf-contact__card-top {
+  margin-bottom: 20px;
+}
+
+.pf-contact__card-title {
+  font-size: 1.15rem;
+  font-weight: 600;
+  color: var(--accent);
+  margin-bottom: 6px;
+  line-height: 1.2;
+}
+
+.pf-contact__card-desc {
+  font-size: 0.78rem;
+  color: var(--muted);
+  line-height: 1.5;
+}
+
+.pf-contact__card-bottom {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 8px;
+  padding-top: 12px;
+  border-top: 1px solid var(--line);
+}
+
+.pf-contact__card-handle {
+  font-family: var(--font-mono);
+  font-size: 0.68rem;
+  color: var(--muted);
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.pf-contact__card-arrow {
+  font-size: 0.78rem;
+  color: var(--faint);
+  flex-shrink: 0;
+  transition: color 0.18s ease;
+}
+
+.pf-contact__card:hover .pf-contact__card-arrow {
+  color: var(--fg);
+}
+
+/* Footer bar */
+.pf-footer {
+  background: var(--surface);
+  border-top: 1px solid var(--line);
+}
+
+.pf-footer__inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
+  padding: 16px clamp(16px, 5vw, 48px);
+}
+
+.pf-footer__logo {
+  font-family: var(--font-mono);
+  font-size: 0.88rem;
+  color: var(--muted);
+  text-decoration: none;
+  transition: color 0.18s ease;
+  white-space: nowrap;
+  flex-shrink: 0;
+}
+
+.pf-footer__logo:hover { color: var(--fg); text-decoration: none; }
+
+.pf-footer__nav {
+  display: flex;
+  gap: 4px;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.pf-footer__nav-link {
+  font-size: 0.78rem;
+  color: var(--faint);
+  text-decoration: none;
+  padding: 3px 7px;
+  border-radius: 4px;
+  transition: color 0.15s ease, background 0.15s ease;
+}
+
+.pf-footer__nav-link:hover {
+  color: var(--fg);
+  background: var(--accent-soft);
+  text-decoration: none;
+}
+
+.pf-footer__right { flex-shrink: 0; }
+
+/* Credit bar */
+.pf-footer__credit {
+  border-top: 1px solid var(--line);
+  background: color-mix(in srgb, var(--surface-2) 60%, transparent);
+}
+
+.pf-footer__credit-inner {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 16px;
+  padding: 10px clamp(16px, 5vw, 48px);
+  font-size: 0.72rem;
+  font-family: var(--font-mono);
+  color: var(--faint);
+}
+
+@media (max-width: 760px) {
+  .pf-footer__inner { flex-direction: column; gap: 12px; text-align: center; }
+  .pf-footer__nav { justify-content: center; }
+  .pf-footer__credit-inner { flex-direction: column; gap: 4px; text-align: center; }
+}
+
+@media (max-width: 520px) {
+  .pf-contact__card { width: 100%; }
 }

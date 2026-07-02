@@ -1,250 +1,130 @@
-import { FC, useState } from "react";
+import { FC } from "react";
 import "./contact.css";
-import {
-  Card,
-  CardActionArea,
-  CardContent,
-  CardMedia,
-  Typography,
-  useTheme,
-  useMediaQuery,
-  Box,
-} from "@mui/material";
-import ReactCardFlip from "react-card-flip";
-import BraggedImage from "../../images/B1.png";
-import GitpitImage from "../../images/G1.png";
-import XImage from "../../images/X1.png";
-import LinkedIn from "../../images/LinkedIn.png";
-import Github from "../../images/github-mark.png";
-import X from "../../images/X-logo-black.png";
+import { useTheme } from "../../context/ThemeContext";
 
-interface contactProps {}
+const NAV_LINKS = [
+  { label: "terminal", id: "terminal" },
+  { label: "about",    id: "about" },
+  { label: "skills",   id: "skills" },
+  { label: "work",     id: "work" },
+  { label: "playground", id: "playground" },
+  { label: "contact",  id: "contact" },
+];
 
-const Contact: FC<contactProps> = () => {
-  const theme = useTheme();
-  const isSmallScreen = useMediaQuery(theme.breakpoints.down("sm"));
+const CARDS = [
+  {
+    title: "Bragged-in",
+    desc: "For all the subtle flex and self-promotion. 😎",
+    platform: "LinkedIn",
+    handle: "/in/rasika-deodhar",
+    href: "https://www.linkedin.com/in/rasika-deodhar/",
+  },
+  {
+    title: "Git-pit",
+    desc: "Place where all abandoned projects fall into. 🤩",
+    platform: "GitHub",
+    handle: "/Rasika-Deodhar",
+    href: "https://github.com/Rasika-Deodhar",
+  },
+  {
+    title: "Xpresso",
+    desc: "Caffeinated coders sharing thoughts. 🫣",
+    platform: "X",
+    handle: "@MoodLearner",
+    href: "https://x.com/MoodLearner",
+  },
+];
 
-  const cardStyle = {
-    border: "1px solid black",
-    padding: isSmallScreen ? "10px" : "20px", // Adjust padding for small screens
-    margin: "20px",
-    width: isSmallScreen ? "100%" : "350px", // Full width on small screens
-    height: isSmallScreen ? "auto" : "250px", // Auto height on small screens
-    fontFamily: "Chillax",
-  };
+const Contact: FC = () => {
+  const { isDark, toggleTheme } = useTheme();
 
-  const [isLinkedinFlipped, setIsisLinkedinFlipped] = useState(false);
-  const [isGithubFlipped, setIsisGithubFlipped] = useState(false);
-  const [isXFlipped, setIsXFlipped] = useState(false);
-
-  const handleLinkedinClick = () => {
-    setIsisLinkedinFlipped(!isLinkedinFlipped);
-    // if (isLinkedinFlipped){window.open('https://www.linkedin.com/in/rasika-deodhar/', '_blank');}
-  };
-  const handleGithubClick = () => {
-    setIsisGithubFlipped(!isGithubFlipped);
-    // if (isGithubFlipped){window.open('https://github.com/Rasika-Deodhar', '_blank');}
-  };
-  const handleXClick = () => {
-    setIsXFlipped(!isXFlipped);
-    // if (isXFlipped){window.open('https://x.com/MoodLearner', '_blank');}
+  const scrollTo = (id: string) => {
+    document.getElementById(id)?.scrollIntoView({ behavior: "smooth" });
   };
 
   return (
-    // Outer Box to center the content on larger screens
-    <Box
-      display="flex"
-      justifyContent="center" // Centers content horizontally
-      alignItems="center" // Centers content vertically
-      marginTop="100px"
-    >
-      <Box
-        className="contact"
-        display="flex"
-        flexWrap="wrap"
-        justifyContent={isSmallScreen ? "center" : "space-between"} // Center for small screens, space-between for larger screens
-        gap={2}
-        maxWidth={1200} // Optional: To limit the max width of the container
-        width="100%" // Ensures the Box container takes the full width
-        padding={2} // Add some padding for responsiveness
-        margin="0 auto" // Centers the container horizontally
-      >
-        <Box flex="1 1 300px" maxWidth={350}>
-          <ReactCardFlip
-            isFlipped={isLinkedinFlipped}
-            flipDirection="horizontal"
-          >
-            <Card style={cardStyle}>
-              <CardActionArea onClick={handleLinkedinClick}>
-                <CardMedia
-                  component="img"
-                  image={BraggedImage}
-                  alt="braggedin"
-                />
-                <CardContent>
-                  <Typography
-                    gutterBottom
-                    variant="h5"
-                    component="div"
-                    fontFamily="Chillax"
-                  >
-                    For all the subtle flex and self-promotion. 😎
-                  </Typography>
-                </CardContent>
-              </CardActionArea>
-            </Card>
-            <Card style={cardStyle}>
-              <CardActionArea
-                onClick={handleLinkedinClick}
-                sx={{
-                  display: "flex",
-                  flexDirection: "column", // Stack items vertically
-                  justifyContent: "center", // Center vertically
-                  alignItems: "center", // Center horizontally
-                  textAlign: "center", // Ensure text is centered
-                }}
-              >
-                <CardMedia
-                  component="img"
-                  image={LinkedIn}
-                  alt="linkedin"
-                  style={{ marginLeft: "1px", width: "235px", height: "200px" }}
-                />
-                <Typography
-                  gutterBottom
-                  variant="h4"
-                  component="a"
-                  href="https://www.linkedin.com/in/rasika-deodhar/"
-                  target="_blank"
-                  fontFamily="Chillax"
-                  sx={{
-                    transition: "color 0.3s ease, transform 0.3s ease",
-                    "&:hover": {
-                      color: "#A86D42 !important", // Force color change
-                      transform: "scale(1.05)",
-                    },
-                  }}
-                >
-                  Let's connect!
-                </Typography>
-              </CardActionArea>
-            </Card>
-          </ReactCardFlip>
-        </Box>
+    <footer id="contact" className="pf-contact">
+      {/* ---- Main contact area ---- */}
+      <div className="pf-contact__main pf-inner">
+        <p className="pf-section-label">05 · Say Hello</p>
+        <h2 className="pf-contact__heading">
+          Let's grab a coffee &amp;<br />
+          build something.
+        </h2>
 
-        <Box flex="1 1 300px" maxWidth={350}>
-          <ReactCardFlip isFlipped={isGithubFlipped} flipDirection="horizontal">
-            <Card style={cardStyle}>
-              <CardActionArea onClick={handleGithubClick}>
-                <CardMedia component="img" image={GitpitImage} alt="Github" />
-                <CardContent>
-                  <Typography
-                    gutterBottom
-                    variant="h5"
-                    component="div"
-                    fontFamily="Chillax"
-                  >
-                    Place where all abandoned projects fall into. 🥲
-                  </Typography>
-                </CardContent>
-              </CardActionArea>
-            </Card>
-            <Card style={cardStyle}>
-              <CardActionArea
-                onClick={handleGithubClick}
-                sx={{
-                  display: "flex",
-                  flexDirection: "column", // Stack items vertically
-                  justifyContent: "center", // Center vertically
-                  alignItems: "center", // Center horizontally
-                  textAlign: "center", // Ensure text is centered
-                }}
-              >
-                <CardMedia
-                  component="img"
-                  image={Github}
-                  alt="github"
-                  style={{ marginLeft: "1px", width: "200px", height: "200px" }}
-                />
-                <Typography
-                  gutterBottom
-                  variant="h4"
-                  component="a"
-                  href="https://github.com/Rasika-Deodhar"
-                  target="_blank"
-                  fontFamily="Chillax"
-                  sx={{
-                    transition: "color 0.3s ease, transform 0.3s ease",
-                    "&:hover": {
-                      color: "#A86D42 !important", // Force color change
-                      transform: "scale(1.05)",
-                    },
-                  }}
-                >
-                  Let's connect!
-                </Typography>
-              </CardActionArea>
-            </Card>
-          </ReactCardFlip>
-        </Box>
+        <p className="pf-contact__sub">// yes, these are the real links</p>
 
-        <Box flex="1 1 300px" maxWidth={350}>
-          <ReactCardFlip isFlipped={isXFlipped} flipDirection="horizontal">
-            <Card style={cardStyle}>
-              <CardActionArea onClick={handleXClick}>
-                <CardMedia component="img" image={XImage} alt="X" />
-                <CardContent>
-                  <Typography
-                    gutterBottom
-                    variant="h5"
-                    component="div"
-                    fontFamily="Chillax"
-                  >
-                    Caffeinated coders sharing thoughts. 🙃
-                  </Typography>
-                </CardContent>
-              </CardActionArea>
-            </Card>
-            <Card style={cardStyle}>
-              <CardActionArea
-                onClick={handleXClick}
-                sx={{
-                  display: "flex",
-                  flexDirection: "column", // Stack items vertically
-                  justifyContent: "center", // Center vertically
-                  alignItems: "center", // Center horizontally
-                  textAlign: "center", // Ensure text is centered
-                }}
+        <div className="pf-contact__cards">
+          {CARDS.map((card) => (
+            <a
+              key={card.href}
+              href={card.href}
+              target="_blank"
+              rel="noreferrer"
+              className="pf-contact__card"
+            >
+              <div className="pf-contact__card-top">
+                <h3 className="pf-contact__card-title">{card.title}</h3>
+                <p className="pf-contact__card-desc">{card.desc}</p>
+              </div>
+              <div className="pf-contact__card-bottom">
+                <span className="pf-contact__card-handle">
+                  {card.platform} · {card.handle}
+                </span>
+                <span className="pf-contact__card-arrow">↗</span>
+              </div>
+            </a>
+          ))}
+        </div>
+      </div>
+
+      {/* ---- Footer bar ---- */}
+      <div className="pf-footer">
+        <div className="pf-footer__inner pf-inner">
+          <div className="pf-footer__left">
+            <a
+              href="#terminal"
+              className="pf-footer__logo"
+              onClick={(e) => { e.preventDefault(); scrollTo("terminal"); }}
+            >
+              ☕ rasika.dev
+            </a>
+          </div>
+
+          <nav className="pf-footer__nav" aria-label="Footer navigation">
+            {NAV_LINKS.map(({ label, id }) => (
+              <a
+                key={id}
+                href={`#${id}`}
+                className="pf-footer__nav-link"
+                onClick={(e) => { e.preventDefault(); scrollTo(id); }}
               >
-                <CardMedia
-                  component="img"
-                  image={X}
-                  alt="x"
-                  style={{ marginLeft: "1px", width: "200px", height: "200px" }}
-                />
-                <Typography
-                  gutterBottom
-                  variant="h4"
-                  component="a"
-                  href="https://x.com/MoodLearner"
-                  target="_blank"
-                  fontFamily="Chillax"
-                  sx={{
-                    transition: "color 0.3s ease, transform 0.3s ease",
-                    "&:hover": {
-                      color: "#A86D42 !important", // Force color change
-                      transform: "scale(1.05)",
-                    },
-                  }}
-                >
-                  Let's connect!
-                </Typography>
-              </CardActionArea>
-            </Card>
-          </ReactCardFlip>
-        </Box>
-      </Box>
-    </Box>
+                {label}
+              </a>
+            ))}
+          </nav>
+
+          <div className="pf-footer__right">
+            <button
+              className="pf-theme-btn"
+              onClick={toggleTheme}
+              aria-label={isDark ? "Switch to light mode" : "Switch to dark mode"}
+            >
+              <span className="pf-theme-btn__icon">{isDark ? "☀" : "☾"}</span>
+              <span className="pf-theme-btn__label">{isDark ? "light" : "dark"}</span>
+            </button>
+          </div>
+        </div>
+
+        {/* ---- Credit bar ---- */}
+        <div className="pf-footer__credit">
+          <div className="pf-footer__credit-inner pf-inner">
+            <span>© {new Date().getFullYear()} Rasika Deodhar · St. Paul, MN</span>
+            <span>Master's in Engineering Management · GPA 4.0 · St. Cloud State</span>
+          </div>
+        </div>
+      </div>
+    </footer>
   );
 };
 
