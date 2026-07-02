@@ -52,7 +52,7 @@ const Contact: FC = () => {
           build something.
         </h2>
 
-        <p className="pf-contact__sub">// yes, these are the real links</p>
+        <p className="pf-contact__sub">&#47;&#47; yes, these are the real links</p>
 
         <div className="pf-contact__cards">
           {CARDS.map((card) => (
