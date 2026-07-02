@@ -1,79 +1,85 @@
-/* Animation for image sliding in from the left */
-@keyframes slideInLeft {
-  from {
-    transform: translateX(-100%);
-    opacity: 0;
+.pf-about {
+  border-top: 1px solid var(--line);
+}
+
+.pf-about__inner {
+  display: grid;
+  grid-template-columns: 280px 1fr;
+  gap: 72px;
+  align-items: center;
+}
+
+/* Illustration */
+.pf-about__illustration {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.pf-about__img {
+  width: 100%;
+  max-width: 280px;
+  height: auto;
+  object-fit: contain;
+  opacity: 0.92;
+  transform: rotate(-25deg);
+}
+
+/* Content */
+.pf-about__content {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.pf-about__heading {
+  font-size: clamp(1.6rem, 3.5vw, 2.2rem);
+  font-weight: 700;
+  letter-spacing: -0.02em;
+  color: var(--fg);
+  line-height: 1.2;
+}
+
+.pf-about__heading-em {
+  font-family: var(--font-serif);
+  font-style: italic;
+  font-weight: 400;
+  color: var(--accent);
+}
+
+.pf-about__bio {
+  font-size: 1rem;
+  color: var(--muted);
+  line-height: 1.75;
+  max-width: 560px;
+}
+
+.pf-about__stack-label {
+  font-size: 0.72rem;
+  font-weight: 600;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--faint);
+  margin-bottom: 10px;
+}
+
+.pf-about__chips {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+@media (max-width: 760px) {
+  .pf-about__inner {
+    grid-template-columns: 1fr;
+    gap: 32px;
   }
-  to {
-    opacity: 1;
+
+  .pf-about__illustration {
+    justify-content: flex-start;
   }
-}
 
-/* Animation for name and title sliding in from the right */
-@keyframes slideInRight {
-  from {
-    transform: translateX(100%);
-    opacity: 0;
+  .pf-about__img {
+    max-width: 200px;
   }
-  to {
-    transform: translateX(0);
-    opacity: 1;
-  }
-}
-
-/* Import the font */
-@font-face {
-  font-family: "Arsenica";
-  src: url("../../../public/arsenica-fonts/ArsenicaTrial-Regular.ttf")
-    format("truetype"); /* Make sure the path matches your font file */
-  font-weight: normal;
-  font-style: normal;
-}
-@font-face {
-  font-family: "Chillax";
-  src: url("../../../public/Chillax_Complete/Fonts/WEB/fonts/Chillax-Regular.ttf")
-    format("truetype"); /* Make sure the path matches your font file */
-  font-weight: normal;
-  font-style: normal;
-}
-
-.about-image {
-  width: "250px";
-  height: "100px";
-  margin-top: "100px";
-  transform: rotate(-22deg);
-  animation: slideInLeft 1s ease-in-out forwards;
-}
-
-.nameAndTitle {
-  margin-left: "50px";
-  font-family: "Arsenica";
-}
-
-.nameAndTitle #name {
-  font-size: 70px;
-  font-weight: bold;
-  animation: ease-in-out forwards;
-  animation-duration: 3s;
-}
-
-/* Apply animation to each letter */
-.name-letter {
-  display: inline-block;
-  opacity: 0; /* Start invisible */
-  animation: slideInRight 0.5s ease-in-out forwards;
-  animation-duration: 3s;
-}
-
-.nameAndTitle #title {
-  font-family: "Chillax";
-  font-size: large;
-  animation: slideInRight 0.5s ease-in-out forwards;
-  animation-duration: 3s;
-}
-
-#description {
-  font-family: "Chillax";
-  font-size: large;
-  font-weight: lighter;
 }

@@ -1,52 +1,182 @@
-/* Setting the background to white */
-#navbar {
-  background-color: #a86d42;
-  padding: 1rem 2rem;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+.pf-nav {
   position: fixed;
-  width: 100%;
   top: 0;
+  left: 0;
+  right: 0;
   z-index: 1000;
-  font-family: "Chillax";
+  height: var(--nav-h);
+  background: transparent;
+  transition: background 0.3s ease, box-shadow 0.3s ease, backdrop-filter 0.3s ease;
 }
 
-/* Styling the list container */
-ul {
+.pf-nav--scrolled {
+  background: color-mix(in srgb, var(--bg) 88%, transparent);
+  backdrop-filter: blur(14px);
+  -webkit-backdrop-filter: blur(14px);
+  box-shadow: 0 1px 0 var(--line);
+}
+
+.pf-nav__inner {
+  max-width: var(--content-max);
+  margin: 0 auto;
+  height: 100%;
+  padding: 0 clamp(16px, 4vw, 40px);
   display: flex;
-  justify-content: center; /* Center the items */
-  list-style: none;
-  padding: 0;
-  margin: 0;
-  gap: 2rem; /* Add spacing between items */
+  align-items: center;
+  gap: 16px;
 }
 
-/* Styling the list items */
-li {
-  display: inline-block;
-}
-
-/* Removing default link styles and making the text black */
-a {
+/* Logo */
+.pf-nav__logo {
+  font-family: var(--font-mono);
+  font-size: 0.92rem;
+  font-weight: 500;
+  color: var(--fg);
   text-decoration: none;
-  color: black;
-  font-size: 1.1rem;
-  transition: color 0.3s ease;
+  letter-spacing: -0.01em;
+  flex-shrink: 0;
+  opacity: 0.9;
+  transition: opacity 0.2s ease;
 }
 
-/* Styling for the active link */
-.active {
-  font-weight: bold;
+.pf-nav__logo:hover {
+  opacity: 1;
+  text-decoration: none;
 }
 
-/* Adding hover effect */
-a:hover {
-  color: white; /* Accent color */
+/* Nav links */
+.pf-nav__links {
+  display: flex;
+  list-style: none;
+  gap: 2px;
+  margin-left: auto;
 }
 
-/* Theme toggle button styles */
-.theme-toggle {
-  padding-top: 0px;
-  margin-top: -20px;
-  margin-right: 50px;
-  float:right;
+.pf-nav__link {
+  display: inline-block;
+  padding: 5px 10px;
+  font-size: 0.82rem;
+  font-weight: 400;
+  color: var(--muted);
+  text-decoration: none;
+  border-radius: 5px;
+  letter-spacing: 0.01em;
+  transition: color 0.18s ease, background 0.18s ease;
+}
+
+.pf-nav__link:hover {
+  color: var(--fg);
+  background: var(--accent-soft);
+  text-decoration: none;
+}
+
+.pf-nav__link--active {
+  color: var(--fg);
+  font-weight: 500;
+}
+
+/* Right cluster */
+.pf-nav__right {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  flex-shrink: 0;
+}
+
+/* Theme button — shows icon + "dark"/"light" label */
+.pf-theme-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+  padding: 4px 10px 4px 8px;
+  font-size: 0.78rem;
+  font-family: var(--font-sans);
+  font-weight: 500;
+  color: var(--muted);
+  background: var(--surface);
+  border: 1px solid var(--line-strong);
+  border-radius: 20px;
+  cursor: pointer;
+  transition: color 0.2s ease, background 0.2s ease, border-color 0.2s ease;
+  white-space: nowrap;
+}
+
+.pf-theme-btn:hover {
+  color: var(--fg);
+  background: var(--surface-2);
+  border-color: var(--accent);
+}
+
+.pf-theme-btn__icon {
+  font-size: 0.85rem;
+  line-height: 1;
+}
+
+.pf-theme-btn__label {
+  line-height: 1;
+}
+
+/* Hamburger */
+.pf-nav__burger {
+  display: none;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 36px;
+  height: 36px;
+  gap: 5px;
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 4px;
+  border-radius: 6px;
+  transition: background 0.2s ease;
+}
+
+.pf-nav__burger:hover { background: var(--accent-soft); }
+
+.pf-nav__burger span {
+  display: block;
+  width: 20px;
+  height: 2px;
+  background: var(--fg);
+  border-radius: 1px;
+  transition: transform 0.25s ease, opacity 0.25s ease;
+  transform-origin: center;
+}
+
+.pf-nav__burger--open span:nth-child(1) { transform: translateY(7px) rotate(45deg); }
+.pf-nav__burger--open span:nth-child(2) { opacity: 0; transform: scaleX(0); }
+.pf-nav__burger--open span:nth-child(3) { transform: translateY(-7px) rotate(-45deg); }
+
+@media (max-width: 860px) {
+  .pf-nav__burger { display: flex; }
+
+  .pf-nav__links {
+    position: fixed;
+    top: var(--nav-h);
+    left: 0;
+    right: 0;
+    flex-direction: column;
+    padding: 14px 20px 20px;
+    background: var(--surface);
+    border-bottom: 1px solid var(--line);
+    box-shadow: 0 8px 24px var(--shadow);
+    gap: 2px;
+    transform: translateY(-110%);
+    opacity: 0;
+    transition: transform 0.28s ease, opacity 0.28s ease;
+    pointer-events: none;
+  }
+
+  .pf-nav__links--open {
+    transform: translateY(0);
+    opacity: 1;
+    pointer-events: all;
+  }
+
+  .pf-nav__link { padding: 10px 12px; font-size: 0.95rem; }
+
+  .pf-theme-btn__label { display: none; }
+  .pf-theme-btn { padding: 5px 8px; }
 }

@@ -1,21 +1,19 @@
-import React, { FC } from "react";
-import { Moon, Sun } from "lucide-react";
+import { FC } from "react";
+import "./themeToggle.css";
 import { useTheme } from "../../context/ThemeContext";
 
 const ThemeToggle: FC = () => {
   const { isDark, toggleTheme } = useTheme();
 
   return (
-    <div
+    <button
       onClick={toggleTheme}
-      className={`p-3 rounded-full transition-all duration-300 ${
-        isDark ? "bg-gray-800 hover:bg-gray-700 text-yellow-400" : "bg-gray-100 hover:bg-gray-200 text-gray-900"
-      }`}
-      aria-label="Toggle theme"
+      className="pf-theme-btn"
+      aria-label={isDark ? "Switch to light mode" : "Switch to dark mode"}
+      title={isDark ? "Light mode" : "Dark mode"}
     >
-      {/* TODO: On hover change the color of toggle */}
-      {isDark ? <Sun id="theme-toggle" size={24} color="black"/> : <Moon id="theme-toggle" size={24} color="black" />}
-    </div>
+      {isDark ? "☀" : "☽"}
+    </button>
   );
 };
 
